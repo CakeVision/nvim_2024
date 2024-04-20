@@ -1,0 +1,99 @@
+--local mason = {
+--	"williamboman/mason.nvim",
+--	"mfussenegger/nvim-dap",
+--	"nvim-telescope/telescope-dap.nvim",
+--	opts = {},
+--	
+--}
+--return mason
+--{
+--			"williamboman/mason.nvim",
+--			"mfussenegger/nvim-dap",
+--			"nvim-telescope/telescope-dap.nvim",
+--			opts = {},
+--			config = function()
+--				vim.keymap.set("n", "<F5>", function()
+--					require("dap").continue()
+--				end)
+--				vim.keymap.set("n", "<F10>", function()
+--					require("dap").step_over()
+--				end)
+--				vim.keymap.set("n", "<F11>", function()
+--					require("dap").step_into()
+--				end)
+--				vim.keymap.set("n", "<F12>", function()
+--					require("dap").step_out()
+--				end)
+--				vim.keymap.set("n", "<Leader>b", function()
+--					require("dap").toggle_breakpoint()
+--				end)
+--				vim.keymap.set("n", "<Leader>B", function()
+--					require("dap").set_breakpoint()
+--				end)
+--				vim.keymap.set("n", "<Leader>lp", function()
+--					require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+--				end)
+--				vim.keymap.set("n", "<Leader>dr", function()
+--					require("dap").repl.open()
+--				end)
+--				vim.keymap.set("n", "<Leader>dl", function()
+--					require("dap").run_last()
+--				end)
+--				vim.keymap.set({ "n", "v" }, "<Leader>dh", function()
+--					require("dap.ui.widgets").hover()
+--				end)
+--				vim.keymap.set({ "n", "v" }, "<Leader>dp", function()
+--					require("dap.ui.widgets").preview()
+--				end)
+--				vim.keymap.set("n", "<Leader>df", function()
+--					local widgets = require("dap.ui.widgets")
+--					widgets.centered_float(widgets.frames)
+--				end)
+--				vim.keymap.set("n", "<Leader>ds", function()
+--					local widgets = require("dap.ui.widgets")
+--					widgets.centered_float(widgets.scopes)
+--				end)
+--			end,
+--		},
+--		{
+--			"jay-babu/mason-nvim-dap.nvim",
+--			dependencies = {
+--				"williamboman/mason.nvim",
+--				"mfussenegger/nvim-dap",
+--				opts = { handlers = {} },
+--			},
+--		},
+--		{
+--			"rcarriga/nvim-dap-ui",
+--			event = "VeryLazy",
+--			dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+--			config = function()
+--				local dap, dapui = require("dap"), require("dapui")
+--				dap.listeners.before.attach.dapui_config = function()
+--					dapui.open()
+--				end
+--				dap.listeners.before.launch.dapui_config = function()
+--					dapui.open()
+--				end
+--				dap.listeners.before.event_terminated.dapui_config = function()
+--					dapui.close()
+--				end
+--				dap.listeners.before.event_exited.dapui_config = function()
+--					dapui.close()
+--				end
+--			end,
+--		},
+--		--  Here are some example plugins that I've included in the Kickstart repository.
+--		--  Uncomment any of the lines below to enable them (you will need to restart nvim).
+--		--
+--		-- require 'kickstart.plugins.debug',
+--		-- require 'kickstart.plugins.indent_line',
+--		-- require 'kickstart.plugins.lint',
+--
+--		-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
+--		--    This is the easiest way to modularize your config.
+--		--
+--		--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
+--		--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
+--	},
+return {}
