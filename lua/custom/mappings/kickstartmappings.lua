@@ -10,6 +10,7 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "go to previous [d]
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "go to next [d]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "show diagnostic [e]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "open diagnostic [q]uickfix list" })
+
 vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "cycle to next quicklist item" })
 vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "cycle to prev quicklist item" })
 
@@ -19,6 +20,12 @@ vim.keymap.set("n", "<c-h>", "<c-w><c-h>", { desc = "move focus to the left wind
 vim.keymap.set("n", "<c-l>", "<c-w><c-l>", { desc = "move focus to the right window" })
 vim.keymap.set("n", "<c-j>", "<c-w><c-j>", { desc = "move focus to the lower window" })
 vim.keymap.set("n", "<c-k>", "<c-w><c-k>", { desc = "move focus to the upper window" })
+
+vim.keymap.set("n", "<leader>-", "<cmd>vsplit<CR>", { desc = "open nvim vertical split" })
+vim.keymap.set("n", "<leader>+", "<cmd>split<CR>", { desc = "open nvim split" })
+
+vim.keymap.set("n", "<leader>T", "<cmd>vsplit<CR><cmd>terminal<CR>", { desc = "open terminal vertical split" })
+vim.keymap.set("n", "<leader>t", "<cmd>split<CR><cmd>terminal<CR>", { desc = "open terminal split" })
 -- [[ basic autocommands ]]
 --  see `:help lua-guide-autocommands`
 --  try it with `yap` in normal mode
